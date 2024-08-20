@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gewichtslogboek</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gewichtslogboek</h1>
+        <button onclick="navigateToDashboard()">Terug naar Dashboard</button>
+    </header>
+
+    <main>
+        <section id="weightLog">
+            <h2>Voer je gegevens in:</h2>
+            <form id="weightForm">
+                <label for="weightDate">Datum:</label>
+                <input type="date" id="weightDate" required>
+
+                <label for="currentWeight">Huidig Gewicht (kg):</label>
+                <input type="number" id="currentWeight" required>
+
+                <label for="goalWeight">Doelgewicht (kg):</label>
+                <input type="number" id="goalWeight" required>
+
+                <button type="button" onclick="addWeight()">Toevoegen</button>
+            </form>
+            <div id="weightLogResults"></div>
+            <canvas id="weightChart" width="400" height="200"></canvas> <!-- Gewichtsgrafiek -->
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/weightLog.js"></script>
+    <script>
+        function navigateToDashboard() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

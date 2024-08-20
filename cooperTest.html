@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coopertest</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Coopertest</h1>
+        <button onclick="navigateToDashboard()">Terug naar Dashboard</button>
+    </header>
+
+    <main>
+        <section id="cooperTest">
+            <h2>Voer je gegevens in:</h2>
+            <form id="cooperTestForm">
+                <label for="cooperDate">Datum:</label>
+                <input type="date" id="cooperDate" required>
+                
+                <label for="distance">Afgelegde afstand (meters):</label>
+                <input type="number" id="distance" required>
+                
+                <button type="button" onclick="addCooperTest()">Toevoegen</button>
+            </form>
+            <div id="cooperTestResults"></div>
+            <canvas id="cooperChart" width="400" height="200"></canvas> <!-- Coopertest Grafiek -->
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/cooperTest.js"></script>
+    <script>
+        function navigateToDashboard() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+

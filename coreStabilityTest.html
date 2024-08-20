@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Stability Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Core Stability Test</h1>
+        <button onclick="navigateToDashboard()">Terug naar Dashboard</button>
+    </header>
+
+    <main>
+        <section id="coreTest">
+            <h2>Voer je Core Stability Test resultaten in:</h2>
+            <form id="coreTestForm">
+                <label for="coreTestDate">Datum:</label>
+                <input type="date" id="coreTestDate" required>
+                
+                <label for="rightPlank">Side-Plank (Rechts) tijd (sec):</label>
+                <input type="number" id="rightPlank" required>
+                
+                <label for="leftPlank">Side-Plank (Links) tijd (sec):</label>
+                <input type="number" id="leftPlank" required>
+                
+                <label for="forearmPlank">Forearm Plank tijd (sec):</label>
+                <input type="number" id="forearmPlank" required>
+                
+                <button type="button" onclick="saveCoreStabilityTest()">Toevoegen</button>
+            </form>
+            <div id="coreTestResults"></div>
+            <canvas id="coreChart" width="400" height="200"></canvas> <!-- Core Stability Test Grafiek -->
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/coreTest.js"></script>
+    <script>
+        function navigateToDashboard() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+
+

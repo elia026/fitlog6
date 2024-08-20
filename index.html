@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Fit Testen</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Koppeling naar de CSS -->
+</head>
+<body>
+    <header>
+        <h1>Personal Fit Testen</h1>
+    </header>
+
+    <main>
+        <!-- Sectie voor persoonsgegevens -->
+        <section id="personalInfo">
+            <h2>Persoonsgegevens</h2>
+            <form id="personalInfoForm">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" required>
+                
+                <label for="birthdate">Geboortedatum:</label>
+                <input type="date" id="birthdate" required>
+                
+                <label for="height">Lengte (cm):</label>
+                <input type="number" id="height" required>
+                
+                <button type="button" onclick="savePersonalInfo()">Opslaan</button>
+            </form>
+            <div id="savedPersonalInfo"></div>
+        </section>
+
+        <!-- Sectie voor dashboard met testen -->
+        <section id="dashboard">
+            <h2>Kies een Test</h2>
+            <div class="test-blocks">
+                <!-- Gewicht Logboek -->
+                <div class="test-block" onclick="navigateTo('weightLog.html')">
+                    <div class="indicator" id="weightIndicator"></div>
+                    <h3>Gewichtslogboek</h3>
+                    <p>Houd je gewicht bij en volg je voortgang.</p>
+                </div>
+                <!-- Bloeddruk Logboek -->
+                <div class="test-block" onclick="navigateTo('bloodPressureLog.html')">
+                    <div class="indicator" id="bpIndicator"></div>
+                    <h3>Bloeddruk Logboek</h3>
+                    <p>Volg je bloeddrukmetingen.</p>
+                </div>
+                <!-- Coopertest -->
+                <div class="test-block" onclick="navigateTo('cooperTest.html')">
+                    <div class="indicator" id="cooperIndicator"></div>
+                    <h3>Coopertest</h3>
+                    <p>Meet je uithoudingsvermogen.</p>
+                </div>
+                <!-- Core Stability Test -->
+                <div class="test-block" onclick="navigateTo('coreStabilityTest.html')">
+                    <div class="indicator" id="coreIndicator"></div>
+                    <h3>Core Stability Test</h3>
+                    <p>Test je core-stabiliteit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sectie voor samenvatting van alle testen -->
+        <section id="summarySection">
+            <h2>Samenvatting van Alle Testen</h2>
+            <button type="button" onclick="generateSummary()">Genereer Samenvatting</button>
+            <div id="testSummary"></div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+

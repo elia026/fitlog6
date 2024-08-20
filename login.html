@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Dashboard Inloggen</h1>
+    </header>
+
+    <main>
+        <section id="loginSection">
+            <h2>Voer de toegangscode in</h2>
+            <form id="loginForm">
+                <label for="accessCode">Toegangscode:</label>
+                <input type="password" id="accessCode" required>
+                
+                <button type="button" onclick="checkAccessCode()">Inloggen</button>
+            </form>
+            <div id="errorMessage" style="color: red; display: none;">Onjuiste toegangscode. Probeer het opnieuw.</div>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
+
